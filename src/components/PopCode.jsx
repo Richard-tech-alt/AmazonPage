@@ -65,7 +65,7 @@
 
 
 import { useState, useEffect } from 'react';
-import { X, MessageCircle, Clock, Shield, Star, Users, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
+import { X, MessageCircle, Clock, Shield, Star, Users, CheckCircle, ArrowRight, Phone, Mail, HeadphonesIcon } from 'lucide-react';
 
 function Popup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -83,6 +83,10 @@ function Popup() {
   const closePopup = () => {
     setIsVisible(false);
   };
+
+  const handleCallSupport = () => {
+  window.location.href = 'tel:+14155552671'; // Replace with your actual number
+};
 
   const steps = [
     {
@@ -185,17 +189,16 @@ function Popup() {
                 <Mail className="w-4 h-4" />
                 <span>Email Us</span>
               </button>
-              
               <button
-                onClick={() => {
-                  closePopup();
-                  // You can add phone call functionality here
-                }}
+              onClick={()=>{
+                handleCallSupport();
+              }}
                 className="flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-6 h-4" />
                 <span>Call Now</span>
-              </button>
+              </button> 
+
             </div>
           </div>
 

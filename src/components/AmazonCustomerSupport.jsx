@@ -631,10 +631,18 @@
 import { useState } from 'react';
 import { HeadphonesIcon, ShieldCheckIcon, ClockIcon, MessageCircleIcon } from 'lucide-react';
 import PopComponent from './PopComponent';
+import PhonePopup from './PhonePopUp';
 
 function AmazonCustomerSupport() {
   // State to manage which FAQ is open
   const [openFAQ, setOpenFAQ] = useState(null);
+
+
+    const phoneNumber = "+1-803-886-6622";
+
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
 
   // Function to toggle FAQ answers
   const toggleFAQ = (index) => {
@@ -700,10 +708,17 @@ function AmazonCustomerSupport() {
                   <MessageCircleIcon className="w-5 h-5" />
                   <span>Start a Conversation</span>
                 </button>
-                <button className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                {/* <button className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                   <HeadphonesIcon className="w-5 h-5" />
                   <span>Call Support</span>
-                </button>
+                </button> */}
+                <a href="tel:+14155552671">
+  <button className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+    <HeadphonesIcon className="w-5 h-5" />
+    <span>Call Support</span>
+  </button>
+</a>
+
               </div>
             </div>
 
@@ -725,7 +740,7 @@ function AmazonCustomerSupport() {
       </header>
 
       <PopComponent />
-
+<PhonePopup/>
       {/* Quick Help Section */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
@@ -971,10 +986,14 @@ function AmazonCustomerSupport() {
               <h3 className="text-lg font-semibold mb-4">Connect</h3>
               <p className="text-gray-300 mb-4">Get support 24/7</p>
               <div className="flex space-x-4">
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
-                  Live Chat
+                <button
+                onClick={()=>{
+                  handlePhoneClick();
+                }}
+                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                  +18038866622
                 </button>
-                <button className="border border-gray-600 hover:border-gray-400 px-4 py-2 rounded-lg transition-colors">
+                <button onClick={handlePhoneClick} className="border border-gray-600 hover:border-gray-400 px-4 py-2 rounded-lg transition-colors">
                   Call Us
                 </button>
               </div>
