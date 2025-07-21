@@ -85,7 +85,7 @@ function Popup() {
   };
 
   const handleCallSupport = () => {
-  window.location.href = 'tel:+14155552671'; // Replace with your actual number
+  window.location.href = 'tel:+18038866622'; // Replace with your actual number
 };
 
   const steps = [
@@ -184,7 +184,7 @@ function Popup() {
                   closePopup();
                   document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="flex items-center justify-center space-x-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300"
+                className="flex items-center justify-center space-x-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300"
               >
                 <Mail className="w-4 h-4" />
                 <span>Email Us</span>
@@ -193,7 +193,7 @@ function Popup() {
               onClick={()=>{
                 handleCallSupport();
               }}
-                className="flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300"
+                className="flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300"
               >
                 <Phone className="w-6 h-4" />
                 <span>Call Now</span>

@@ -712,7 +712,7 @@ function AmazonCustomerSupport() {
                   <HeadphonesIcon className="w-5 h-5" />
                   <span>Call Support</span>
                 </button> */}
-                <a href="tel:+14155552671">
+                <a href="tel:+18038866622">
   <button className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
     <HeadphonesIcon className="w-5 h-5" />
     <span>Call Support</span>
